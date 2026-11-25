@@ -1,0 +1,68 @@
+# ==============================================================================
+# .gitignore — Proyecto Bacheta
+# ==============================================================================
+
+# --- PlatformIO / ESP32 ---
+.pio/
+firmware/.pio/
+.pioenvs/
+.piolibdeps/
+.clang_complete
+.gcc-flags.json
+*.bin
+*.elf
+*.map
+
+# Archivos autogenerados por la extensión C/C++ y PlatformIO en el IDE
+.vscode/.browse.c_cpp.db*
+.vscode/c_cpp_properties.json
+.vscode/launch.json
+.vscode/ipch/
+
+# Credenciales Wi-Fi locales y secretos (NO subir al repositorio)
+secrets.h
+**/secrets.h
+wifi_config.h
+**/wifi_config.h
+.env
+.env.*
+!.env.example
+
+# --- Python (Simulación y Análisis) ---
+venv/
+.venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Datos de prueba pesados y salidas generadas por simulación
+*.csv
+*.log
+simulation/output/
+simulation/*.html
+
+# --- OpenSCAD (Diseño 3D) ---
+# Archivos temporales y respaldos de OpenSCAD
+*.scad~
+*.backup
+*.csg
+*.ast
+*.echo
+# Modelos exportados generados a partir de los .scad (descomentar si se desea versionar un STL final)
+*.stl
+*.3mf
+
+# --- Sistema Operativo y Editores ---
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+
